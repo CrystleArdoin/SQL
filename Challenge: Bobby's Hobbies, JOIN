@@ -38,7 +38,7 @@ SELECT p.name, h.name
 FROM persons p
 JOIN hobbies h
 ON p.id =h.person_id
-WHERE p.name="Bobby McBobbyFace",
+WHERE p.name="Bobby McBobbyFace";
 
 
 
