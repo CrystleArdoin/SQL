@@ -34,7 +34,7 @@ INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Woodrow Ardoin", 
 INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Donald Shamblin", "8", "Marijuana Grower");
 INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Efren Sanchez", "3", "Railroad Inspector");
 
-SELECT celebrities.ID, celebrities.fullname, celebrities.marriages, mortals.id,mortals.fullname, mortals.marriages
+SELECT celebrities.ID, celebrities.fullname, celebrities.marriages, celebrities.movie, mortals.id,mortals.fullname, mortals.marriages,mortals.occupation
 
 FROM celebrities
 INNER JOIN mortals 
