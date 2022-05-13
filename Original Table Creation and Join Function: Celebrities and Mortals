@@ -1,0 +1,41 @@
+/* Create table about the people and what they do here */
+CREATE TABLE celebrities (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    movie TEXT,
+    marriages INTEGER);
+    
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Tom Cruise", "3", "Top Gun");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Harrison Ford", "3", "Indiana Jones");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Tom Hanks", "2", "Castaway");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Leonardo Dicaprio", "0", "Titanic");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Paul Rudd", "1", "I Love You Man");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Natalie Portman", "1", "Black Swan");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Winona Ryder", "0", "Beetlejuice");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Johnny Depp", "3", "Pirate of the Caribbean");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Rita Wilson", "2", "Now and Then");
+INSERT INTO celebrities (fullname, marriages, Movie) VALUES ("Nicole Kidman", "3", "Top Gun");
+
+
+CREATE TABLE mortals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    occupation TEXT,
+    marriages INTEGER);
+    
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Isaac Ardoin", "1", "Army Officer");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Crystle Ardoin", "1", "Future Data Analyst");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("John Boring", "9", "Police Officer");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Makynleighann Huckleby", "8", "waitress");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Bo Handle", "5", "Pharmacist");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Elena Harris", "2", "Nurse");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Margot Ardoin ", "0", "student");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Woodrow Ardoin", "0", "student");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Donald Shamblin", "8", "Marijuana Grower");
+INSERT INTO mortals (fullname, marriages, occupation) VALUES ("Efren Sanchez", "3", "Railroad Inspector");
+
+SELECT celebrities.ID, celebrities.fullname, celebrities.marriages, mortals.id,mortals.fullname, mortals.marriages
+
+FROM celebrities
+INNER JOIN mortals 
+ON celebrities.ID=mortals.ID; 
