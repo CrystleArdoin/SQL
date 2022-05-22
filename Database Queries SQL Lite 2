@@ -1,0 +1,29 @@
+In this series of exercises, I explore filter options and review syntax.
+
+#1.
+SELECT orderdate
+FROM BIT_DB.FebSales
+WHERE orderdate between '02/13/19 00:00' AND '02/18/19 00:00';
+
+#2.
+SELECT location
+FROM BIT_DB.FebSales
+WHERE orderdate='02/18/19 01:35';
+
+#3.
+SELECT sum(quantity)
+FROM BIT_DB.FebSales
+WHERE orderdate like '02/18/19%';
+
+#4.
+SELECT orderdate FROM BIT_DB.FebSales;
+
+#5.
+SELECT distinct Product
+FROM BIT_DB.FebSales
+WHERE product like '%Batteries%';
+
+#6.
+SELECT distinct Product, Price
+FROM BIT_DB.FebSales
+WHERE Price like '%.99';
